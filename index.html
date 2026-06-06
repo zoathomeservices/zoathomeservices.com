@@ -706,7 +706,10 @@ function submitForm() {
   document.getElementById("formSuccess").style.display = "block";
 }
 
-const observer = new IntersectionObserver((entries) => {
+document.addEventListener('DOMContentLoaded', function() {
+  showPage('home');
+});
+  const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
 }, { threshold: 0.1 });
 document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
