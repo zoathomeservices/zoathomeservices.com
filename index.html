@@ -671,8 +671,14 @@
 
 <script>
 function showPage(name) {
-  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-  document.getElementById("page-" + name).classList.add("active");
+  var pages = document.querySelectorAll(".page");
+  for (var i = 0; i < pages.length; i++) {
+    pages[i].style.display = "none";
+  }
+  var target = document.getElementById("page-" + name);
+  if (target) {
+    target.style.display = "block";
+  }
   window.scrollTo(0, 0);
 }
 
