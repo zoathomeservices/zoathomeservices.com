@@ -671,13 +671,14 @@
 
 <script>
 function showPage(name) {
-  var pages = document.querySelectorAll(".page");
-  for (var i = 0; i < pages.length; i++) {
-    pages[i].style.display = "none";
-  }
+  document.querySelectorAll(".page").forEach(function(p) {
+    p.style.display = "none";
+    p.classList.remove("active");
+  });
   var target = document.getElementById("page-" + name);
   if (target) {
     target.style.display = "block";
+    target.classList.add("active");
   }
   window.scrollTo(0, 0);
 }
@@ -693,32 +694,12 @@ function submitForm() {
     return;
   }
   const subject = encodeURIComponent("New Service Request from " + name);
-  const body = encodeURIComponent(
-    "Name: " + name + "
-" +
-    "Phone: " + phone + "
-" +
-    "Email: " + email + "
-" +
-    "Area: " + document.getElementById("faddress").value + "
-" +
-    "Service: " + service + "
-
-" +
-    "Message:
-" + message
-  );
+  const body = encodeURIComponent("Name: " + name + "\nPhone: " + phone + "\nEmail: " + email + "\nService: " + service + "\nMessage:\n" + message);
   window.location.href = "mailto:zack@zoathomeservices.com?subject=" + subject + "&body=" + body;
   document.getElementById("formSuccess").style.display = "block";
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  showPage('home');
-});
-  const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
-}, { threshold: 0.1 });
-document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+showPage('home');
 </script>
 </body>
 </html>
