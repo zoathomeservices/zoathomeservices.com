@@ -39,8 +39,8 @@
   .nav-cta:hover { background:var(--cobalt-dark); }
   .nav-toggle { display:none; background:none; border:none; color:var(--white); font-size:24px; cursor:pointer; padding:4px 8px; line-height:1; }
   @media(max-width:640px) {
-    .nav-toggle { display:flex; order:2; }
-    .nav-cta { order:3; }
+    .nav-toggle { display:flex; order:-1; }
+    .nav-cta { order:3; padding:8px 12px; }
     .nav-links { display:none; position:absolute; top:60px; left:0; right:0; flex-direction:column; gap:0; background:rgba(7,7,15,0.98); border-bottom:1px solid var(--cobalt-border); padding:8px 0; order:4; }
     .nav-links.open { display:flex; }
     .nav-links a { padding:14px 24px; width:100%; }
