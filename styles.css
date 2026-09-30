@@ -1,0 +1,229 @@
+/* ═══════════════════════════════════════════════════════════════════
+   ZACK OF ALL TRADES — shared stylesheet
+   This one file styles every page (/, /services, /reviews, /connect).
+   Change a color or font here and it updates everywhere at once.
+   Brand: electric cobalt blue / black / metallic silver, dark backgrounds.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --cobalt: #0057FF;
+  --cobalt-dark: #0040CC;
+  --cobalt-glow: rgba(0,87,255,0.15);
+  --cobalt-border: rgba(0,87,255,0.3);
+  --black: #07070f;
+  --dark: #0d0d18;
+  --card: #13131f;
+  --card2: #1a1a28;
+  --silver: #c8d0e0;
+  --dim: #9aa3b2;
+  --white: #ffffff;
+  --amber: #FFB300;
+  /* Lighter cobalt reserved for small text on dark backgrounds (AA contrast).
+     Buttons, glows, and large display type keep the brand --cobalt. */
+  --cobalt-text: #7aa5ff;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { background:var(--black); color:var(--white); font-family:"Barlow",sans-serif; overflow-x:hidden; }
+/* The `hidden` attribute must win over any display set by component classes. */
+[hidden] { display:none !important; }
+
+/* ═══════ NAV (shared on every page) ═══════ */
+nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(7,7,15,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--cobalt-border); display:flex; align-items:center; justify-content:space-between; padding:0 24px; height:60px; }
+.nav-left { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo { height:36px; width:auto; }
+.nav-wordmark { font-family:"Barlow Condensed",sans-serif; font-weight:900; font-size:18px; letter-spacing:0.06em; text-transform:uppercase; color:var(--white); line-height:1; }
+.nav-wordmark span { color:var(--cobalt); }
+.nav-links { display:flex; gap:24px; align-items:center; }
+.nav-links a { font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:12px; letter-spacing:0.15em; text-transform:uppercase; color:var(--dim); text-decoration:none; transition:color 0.2s; }
+.nav-links a:hover { color:var(--white); }
+.nav-links a.active { color:var(--white); }
+.nav-cta { display:inline-flex; align-items:center; gap:8px; background:var(--cobalt); color:var(--white); font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 20px; border-radius:4px; text-decoration:none; transition:background 0.2s; }
+.nav-cta:hover { background:var(--cobalt-dark); }
+.nav-cta-icon { font-size:20px; line-height:1; }
+.nav-cta-text { line-height:1.2; text-align:center; }
+.nav-toggle { display:none; background:none; border:none; color:var(--white); font-size:24px; cursor:pointer; padding:4px 8px; line-height:1; }
+@media(max-width:640px) {
+  .nav-toggle { display:flex; order:-1; }
+  .nav-cta { order:3; padding:8px 12px; }
+  .nav-links { display:none; position:absolute; top:60px; left:0; right:0; flex-direction:column; gap:0; background:rgba(7,7,15,0.98); border-bottom:1px solid var(--cobalt-border); padding:8px 0; order:4; }
+  .nav-links.open { display:flex; }
+  .nav-links a { padding:14px 24px; width:100%; }
+}
+
+/* ═══════ HERO (home page) ═══════ */
+.hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:100px 24px 60px; position:relative; overflow:hidden; }
+.hero-bg { position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 40%, rgba(0,87,255,0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(0,87,255,0.06) 0%, transparent 60%); }
+.hero-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(0,87,255,0.04) 1px, transparent 1px),linear-gradient(90deg,rgba(0,87,255,0.04) 1px,transparent 1px); background-size:40px 40px; mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 100%); }
+.hero-content { position:relative; z-index:2; max-width:700px; }
+.hero-logo { width:90px; height:90px; object-fit:contain; margin-bottom:24px; filter:drop-shadow(0 0 24px rgba(0,87,255,0.5)); animation:float 4s ease-in-out infinite; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+.hero-badge { display:inline-block; background:var(--cobalt-glow); border:1px solid var(--cobalt-border); color:var(--cobalt); font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; padding:6px 16px; border-radius:20px; margin-bottom:20px; }
+.hero h1 { font-family:"Barlow Condensed",sans-serif; font-weight:900; font-size:clamp(42px,10vw,72px); line-height:0.95; letter-spacing:-0.01em; text-transform:uppercase; margin-bottom:8px; }
+.hero h1 .blue { color:var(--cobalt); }
+.hero-sub { font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:clamp(16px,4vw,22px); letter-spacing:0.15em; text-transform:uppercase; color:var(--silver); margin-bottom:12px; }
+/* Credibility line — one honest sentence about who runs the place. */
+.cred-line { font-size:14px; color:var(--silver); letter-spacing:0.04em; margin-bottom:20px; }
+.cred-line strong { color:var(--white); }
+.hero-desc { font-size:16px; color:var(--dim); line-height:1.7; max-width:520px; margin:0 auto 36px; }
+.hero-buttons { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.btn-primary { background:var(--cobalt); color:var(--white); font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:16px 32px; border-radius:4px; text-decoration:none; transition:all 0.2s; display:inline-flex; align-items:center; gap:8px; }
+.btn-primary:hover { background:var(--cobalt-dark); transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,87,255,0.4); }
+.btn-secondary { background:transparent; color:var(--silver); font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:16px 32px; border-radius:4px; border:1px solid rgba(200,208,224,0.2); text-decoration:none; transition:all 0.2s; }
+.btn-secondary:hover { border-color:var(--cobalt); color:var(--cobalt); }
+.hero-trust { margin-top:48px; display:flex; gap:32px; justify-content:center; flex-wrap:wrap; }
+.trust-item { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.trust-num { font-family:"Barlow Condensed",sans-serif; font-weight:900; font-size:28px; color:var(--cobalt); }
+.trust-label { font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dim); }
+
+/* ═══════ SPECIALTY MARQUEE STRIP ═══════ */
+.specialty-strip { background:var(--cobalt); padding:14px 24px; overflow:hidden; white-space:nowrap; }
+.strip-inner { display:inline-flex; gap:48px; animation:marquee 25s linear infinite; }
+@keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+.strip-item { font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:13px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.9); }
+.strip-dot { color:rgba(255,255,255,0.4); }
+
+/* ═══════ GENERIC SECTIONS ═══════ */
+.section { padding:80px 24px; max-width:900px; margin:0 auto; }
+/* Wider content area for pages that tile content (services price grid). */
+.section-wide { max-width:1150px; }
+.section-label { font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--cobalt-text); margin-bottom:12px; }
+.section-title { font-family:"Barlow Condensed",sans-serif; font-weight:900; font-size:clamp(32px,6vw,48px); text-transform:uppercase; line-height:1; margin-bottom:16px; }
+.section-sub { font-size:15px; color:var(--dim); line-height:1.7; max-width:520px; margin-bottom:48px; }
+.full-divider { height:1px; background:linear-gradient(to right,transparent,rgba(0,87,255,0.3),transparent); }
+.alt-bg { background:var(--dark); border-top:1px solid rgba(255,255,255,0.05); border-bottom:1px solid rgba(255,255,255,0.05); }
+/* Inner pages (services, reviews, connect) sit under the fixed nav. */
+.page-top { padding-top:80px; }
+
+/* ═══════ SPECIALTY CARDS (home) ═══════ */
+.lead-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:48px; }
+@media(max-width:600px) { .lead-grid { grid-template-columns:1fr; } }
+.lead-card { background:var(--card); border:1px solid rgba(0,87,255,0.2); border-radius:8px; padding:28px 24px; position:relative; overflow:hidden; transition:all 0.2s; }
+.lead-card::before { content:""; position:absolute; top:0; left:0; right:0; height:3px; background:var(--cobalt); }
+.lead-card:hover { border-color:var(--cobalt); transform:translateY(-3px); box-shadow:0 12px 32px rgba(0,87,255,0.15); }
+.lead-icon { font-size:32px; margin-bottom:12px; display:block; }
+.lead-title { font-family:"Barlow Condensed",sans-serif; font-weight:800; font-size:20px; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px; }
+.lead-desc { font-size:13px; color:var(--dim); line-height:1.6; margin-bottom:16px; }
+.lead-price { font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:13px; color:var(--cobalt-text); letter-spacing:0.05em; }
+
+/* ═══════ SERVICE GRID (home overview) ═══════ */
+.service-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+.service-card { background:var(--card); border:1px solid rgba(255,255,255,0.06); border-radius:6px; padding:20px 18px; transition:all 0.2s; }
+.service-card:hover { border-color:var(--cobalt-border); background:var(--card2); }
+.service-card-icon { font-size:22px; margin-bottom:10px; display:block; }
+.service-card-title { font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:4px; }
+.service-card-desc { font-size:12px; color:var(--dim); line-height:1.5; }
+
+/* ═══════ BEFORE / AFTER GALLERY (home) ═══════
+   To add a photo: save the image in assets/gallery/ (e.g. porch-fan-after.jpg),
+   then replace a placeholder block below with the <img> snippet from the
+   HTML comment on the home page. Keep photos under ~200KB so the page loads
+   fast on phones. */
+.gallery-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
+.gallery-item { border-radius:8px; overflow:hidden; border:1px solid rgba(255,255,255,0.06); background:var(--card); }
+.gallery-item img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+.gallery-caption { padding:12px 16px; font-size:13px; color:var(--silver); }
+/* On phones the gallery becomes a swipeable row instead of a tall stack. */
+@media(max-width:640px) {
+  .gallery-grid { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; gap:12px; margin:0 -24px; padding:4px 24px 12px; scrollbar-width:none; }
+  .gallery-grid::-webkit-scrollbar { display:none; }
+  .gallery-item { flex:0 0 80%; scroll-snap-align:center; }
+}
+
+/* ═══════ HOW IT WORKS ═══════ */
+.steps { display:flex; flex-direction:column; gap:0; position:relative; }
+.steps::before { content:""; position:absolute; left:23px; top:24px; bottom:24px; width:2px; background:linear-gradient(to bottom,var(--cobalt),transparent); }
+.step { display:flex; gap:24px; align-items:flex-start; padding:24px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+.step:last-child { border-bottom:none; }
+.step-num { width:48px; height:48px; border-radius:50%; background:var(--cobalt); display:flex; align-items:center; justify-content:center; font-family:"Barlow Condensed",sans-serif; font-weight:900; font-size:18px; flex-shrink:0; position:relative; z-index:1; }
+.step-content { padding-top:8px; }
+.step-title { font-family:"Barlow Condensed",sans-serif; font-weight:800; font-size:18px; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:6px; }
+.step-desc { font-size:14px; color:var(--dim); line-height:1.6; }
+
+/* ═══════ DISCOUNT CARDS ═══════ */
+.discount-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media(max-width:600px) { .discount-grid { grid-template-columns:1fr; } }
+
+/* ═══════ SERVICE AREA ═══════ */
+.zone-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; margin-top:32px; }
+.zone-card { background:var(--card); border-radius:8px; padding:24px 20px; border:1px solid rgba(255,255,255,0.06); }
+.zone-card.primary { border-color:var(--cobalt-border); }
+.zone-title { font-family:"Barlow Condensed",sans-serif; font-weight:800; font-size:14px; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:4px; }
+.zone-card.primary .zone-title { color:var(--cobalt-text); }
+.zone-fee { font-size:12px; color:var(--dim); margin-bottom:12px; }
+.zone-towns { font-size:13px; color:var(--silver); line-height:1.7; }
+
+/* ═══════ PRICING MENU (services page) — edit prices here ═══════ */
+.price-section { margin-bottom:40px; }
+/* Tiled 2-up on desktop/tablet, single column on phones (≤600px). */
+.price-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:40px; }
+.price-grid .price-section { margin-bottom:0; }
+@media(max-width:600px) { .price-grid { grid-template-columns:1fr; } }
+.price-section-title { font-family:"Barlow Condensed",sans-serif; font-weight:900; font-size:20px; text-transform:uppercase; letter-spacing:0.06em; color:var(--cobalt); border-bottom:2px solid var(--cobalt-border); padding-bottom:8px; margin-bottom:16px; }
+.price-row { display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:14px; }
+.price-row:last-child { border-bottom:none; }
+.price-name { color:var(--silver); }
+.price-note { font-size:11px; color:var(--dim); margin-top:2px; }
+.price-amount { font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:16px; color:var(--cobalt-text); white-space:nowrap; margin-left:16px; }
+.price-addon { color:var(--dim); font-size:13px; padding-left:16px; }
+
+/* ═══════ REVIEWS ═══════ */
+.reviews-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; margin-bottom:32px; }
+.review-card { background:var(--card); border:1px solid rgba(255,255,255,0.06); border-radius:8px; padding:24px; }
+.review-stars { color:var(--amber); font-size:14px; margin-bottom:8px; }
+.review-text { font-size:13px; color:var(--silver); line-height:1.6; margin-bottom:12px; font-style:italic; }
+.review-author { font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dim); }
+.review-cta { text-align:center; margin-top:32px; }
+/* Empty state shown until real reviews are pasted in. */
+.reviews-empty { text-align:center; padding:40px 0; }
+.reviews-empty p { color:var(--dim); font-size:15px; line-height:1.7; margin-bottom:8px; }
+
+/* ═══════ CONTACT FORM (connect page) ═══════ */
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+@media(max-width:640px) { .contact-grid { grid-template-columns:1fr; } }
+.contact-info { display:flex; flex-direction:column; gap:20px; }
+.contact-item { display:flex; align-items:center; gap:12px; }
+.contact-icon { width:40px; height:40px; background:var(--cobalt-glow); border:1px solid var(--cobalt-border); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+.contact-item-text a { color:var(--silver); text-decoration:none; font-size:14px; }
+.contact-item-text a:hover { color:var(--cobalt-text); }
+.contact-item-label { font-size:11px; color:var(--dim); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:2px; }
+.form { display:flex; flex-direction:column; gap:14px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media(max-width:480px) { .form-row { grid-template-columns:1fr; } }
+.form input, .form textarea, .form select { background:var(--card); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:12px 16px; color:var(--white); font-family:"Barlow",sans-serif; font-size:14px; width:100%; transition:border-color 0.2s; outline:none; }
+.form input:focus, .form textarea:focus, .form select:focus { border-color:var(--cobalt); }
+.form input::placeholder, .form textarea::placeholder { color:var(--dim); }
+.form textarea { resize:vertical; min-height:120px; }
+.form select option { background:var(--dark); }
+.form-submit { background:var(--cobalt); color:var(--white); font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:16px 32px; border-radius:4px; border:none; cursor:pointer; transition:all 0.2s; width:100%; }
+.form-submit:hover { background:var(--cobalt-dark); transform:translateY(-1px); }
+.form-success { display:none; background:rgba(26,122,74,0.1); border:1px solid rgba(26,122,74,0.3); border-radius:6px; padding:16px; color:#4ade80; font-size:14px; text-align:center; }
+
+/* ═══════ CONNECT CARDS (connect page) ═══════ */
+.connect-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; max-width:700px; margin:0 auto; }
+.connect-card { background:var(--card); border:1px solid rgba(255,255,255,0.06); border-radius:8px; padding:24px 20px; text-align:center; text-decoration:none; color:inherit; transition:all 0.2s; display:block; }
+.connect-card:hover { border-color:var(--cobalt-border); transform:translateY(-3px); }
+.connect-card-icon { font-size:32px; margin-bottom:12px; display:flex; align-items:center; justify-content:center; height:40px; }
+.connect-card-icon svg { width:36px; height:36px; }
+.connect-card-title { font-family:"Barlow Condensed",sans-serif; font-weight:800; font-size:16px; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px; }
+.connect-card-desc { font-size:12px; color:var(--dim); }
+
+/* ═══════ CTA ═══════ */
+.cta-section { text-align:center; padding:100px 24px; position:relative; overflow:hidden; }
+.cta-bg { position:absolute; inset:0; background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(0,87,255,0.1) 0%,transparent 70%); }
+.cta-section h2 { font-family:"Barlow Condensed",sans-serif; font-weight:900; font-size:clamp(36px,8vw,60px); text-transform:uppercase; line-height:1; margin-bottom:16px; position:relative; z-index:1; }
+.cta-section p { font-size:16px; color:var(--dim); margin-bottom:36px; position:relative; z-index:1; }
+.cta-contact { position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:12px; }
+.cta-phone { font-family:"Barlow Condensed",sans-serif; font-weight:900; font-size:clamp(28px,6vw,42px); color:var(--cobalt); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.cta-phone:hover { color:var(--white); }
+.cta-email { font-size:15px; color:var(--dim); text-decoration:none; }
+.cta-email:hover { color:var(--silver); }
+
+/* ═══════ FOOTER (shared on every page) ═══════ */
+footer { background:var(--dark); border-top:1px solid rgba(255,255,255,0.06); padding:32px 24px; text-align:center; }
+.footer-logo { height:40px; margin-bottom:12px; }
+.footer-name { font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:13px; letter-spacing:0.15em; text-transform:uppercase; color:var(--dim); margin-bottom:4px; }
+.footer-loc { font-size:12px; color:var(--dim); opacity:0.6; }
+.footer-nav { margin-top:16px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+.footer-nav a { font-size:12px; color:var(--dim); text-decoration:none; }
+.footer-nav a:hover { color:var(--white); }

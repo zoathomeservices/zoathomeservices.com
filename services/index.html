@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Flat-rate handyman pricing from Zack of All Trades, Lapeer MI. TV mounting, smart home, outlets, fixtures, plumbing, doors, furniture assembly and more. $89 minimum, no surprises.">
+<title>Services &amp; Flat-Rate Pricing | Zack of All Trades</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- ═══════ SITE NAV — same on every page ═══════ -->
+<nav>
+  <a href="/" class="nav-left">
+    <img src="/assets/logo.jpg" alt="Zack of All Trades logo" class="nav-logo">
+    <div class="nav-wordmark">Zack of All <span>Trades</span></div>
+  </a>
+  <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/services/" class="active">Services</a>
+    <a href="/reviews/">Reviews</a>
+    <a href="/connect/">Connect</a>
+  </div>
+  <a href="tel:8103699628" class="nav-cta"><span class="nav-cta-icon" aria-hidden="true">📞</span><span class="nav-cta-text">Call<br>Now</span></a>
+</nav>
+
+<!-- ═══════ PRICING MENU — edit prices here.
+     Each price-section is one category. To change a price, find the
+     service name and edit the number in the price-amount div next to it.
+     To add a service, copy a whole price-row block and paste it in the
+     right category. ═══════ -->
+<div class="page-top">
+  <div class="section section-wide">
+    <div class="section-label">Full Menu</div>
+    <h2 class="section-title">All Services &amp; Pricing</h2>
+    <p class="section-sub">Flat rate pricing. No surprises. Jobs requiring crawl space, attic, or restricted access may include an additional service fee.</p>
+
+    <div style="background:rgba(0,87,255,0.08); border:1px solid var(--cobalt-border); border-radius:8px; padding:16px 20px; margin-bottom:32px;">
+      <p style="color:var(--silver); font-size:14px; margin:0;"><strong style="color:var(--white);">$89 minimum applies to all service calls.</strong> $75 diagnostic fee credited toward any work completed.</p>
+    </div>
+
+    <!-- ═══════ PRICE CATEGORIES — tiled 2-up on desktop, single column on phones.
+         The notice box above, discounts box, and bottom CTA stay full-width. ═══════ -->
+    <div class="price-grid">
+    <div class="price-section">
+      <div class="price-section-title">📺 TV &amp; Entertainment Mounting</div>
+      <div class="price-row"><div><div class="price-name">Standard Wall Mount (fixed or tilt, up to 85")</div></div><div class="price-amount">$179</div></div>
+      <div class="price-row"><div><div class="price-name">Full Motion Mount (articulating arm)</div></div><div class="price-amount">$249</div></div>
+      <div class="price-row"><div><div class="price-name">Above Fireplace (full motion, no brick drilling)</div></div><div class="price-amount">$299</div></div>
+      <div class="price-row price-addon"><div class="price-name">+ Wire Concealment — surface raceway</div><div class="price-amount">+$89</div></div>
+      <div class="price-row price-addon"><div class="price-name">+ Wire Concealment — in-wall kit</div><div class="price-amount">+$149</div></div>
+      <div class="price-row price-addon"><div class="price-name">+ Soundbar Mount</div><div class="price-amount">+$59</div></div>
+      <div class="price-row price-addon"><div class="price-name">2+ TVs same visit</div><div class="price-amount">–$25 each</div></div>
+    </div>
+
+    <div class="price-section">
+      <div class="price-section-title">🏠 Smart Home Upgrades &amp; Setup</div>
+      <div class="price-row"><div><div class="price-name">Smart Switch / Dimmer Install</div></div><div class="price-amount">$109</div></div>
+      <div class="price-row"><div><div class="price-name">Smart Fan Control Install</div></div><div class="price-amount">$109</div></div>
+      <div class="price-row"><div><div class="price-name">Smart Plug Install + Setup</div></div><div class="price-amount">$59</div></div>
+      <div class="price-row"><div><div class="price-name">Smart Doorbell Swap (existing wired)</div></div><div class="price-amount">$149</div></div>
+      <div class="price-row"><div><div class="price-name">Smart Display / Hub Setup</div></div><div class="price-amount">$79</div></div>
+      <div class="price-row"><div><div class="price-name">Alexa / Google Home Setup + Walkthrough</div></div><div class="price-amount">$79</div></div>
+      <div class="price-row price-addon"><div class="price-name">+ App integration add-on</div><div class="price-amount">+$49</div></div>
+      <div class="price-row price-addon"><div class="price-name">+ Alexa / Google integration add-on</div><div class="price-amount">+$69</div></div>
+      <div class="price-row"><div><div class="price-name">Smart Starter Package (~1.5 hrs)</div></div><div class="price-amount">$249</div></div>
+      <div class="price-row"><div><div class="price-name">Smart Home Setup Package (~2–3 hrs)</div></div><div class="price-amount">$399</div></div>
+      <div class="price-row"><div><div class="price-name">Whole Home Smart Package (~3–4 hrs)</div></div><div class="price-amount">$599</div></div>
+    </div>
+
+    <div class="price-section">
+      <div class="price-section-title">⚡ Outlets, Switches &amp; GFCI</div>
+      <div class="price-row"><div><div class="price-name">Standard Outlet Replacement</div></div><div class="price-amount">$79</div></div>
+      <div class="price-row"><div><div class="price-name">GFCI Outlet Install / Replace</div></div><div class="price-amount">$89</div></div>
+      <div class="price-row"><div><div class="price-name">USB Outlet Install</div></div><div class="price-amount">$89</div></div>
+      <div class="price-row"><div><div class="price-name">Light Switch Replacement</div></div><div class="price-amount">$79</div></div>
+      <div class="price-row"><div><div class="price-name">Dimmer Switch Install (non-smart)</div></div><div class="price-amount">$89</div></div>
+      <div class="price-row"><div><div class="price-name">Cover Plate Replacement (up to 5)</div></div><div class="price-amount">$39</div></div>
+      <div class="price-row price-addon"><div class="price-name">Need to bundle multiples? Discounts available — just ask.</div><div class="price-amount">Inquire</div></div>
+    </div>
+
+    <div class="price-section">
+      <div class="price-section-title">💡 Fixture Swaps</div>
+      <div class="price-row"><div><div class="price-name">Light Fixture Replacement (interior)</div></div><div class="price-amount">$109</div></div>
+      <div class="price-row"><div><div class="price-name">Exterior Light Fixture</div></div><div class="price-amount">$109</div></div>
+      <div class="price-row"><div><div class="price-name">Ceiling Fan Swap (existing wiring)</div></div><div class="price-amount">$139</div></div>
+    </div>
+
+    <div class="price-section">
+      <div class="price-section-title">🔧 Plumbing Repairs</div>
+      <div class="price-row"><div><div class="price-name">Toilet Seat Replacement</div></div><div class="price-amount">$59</div></div>
+      <div class="price-row"><div><div class="price-name">Flapper Repair</div></div><div class="price-amount">$79</div></div>
+      <div class="price-row"><div><div class="price-name">Toilet Tank Rebuild</div></div><div class="price-amount">$129</div></div>
+      <div class="price-row"><div><div class="price-name">Toilet Replacement (customer supplies)</div></div><div class="price-amount">$179</div></div>
+      <div class="price-row"><div><div class="price-name">Showerhead Replacement</div></div><div class="price-amount">$79</div></div>
+      <div class="price-row"><div><div class="price-name">Sink Faucet Replacement</div></div><div class="price-amount">$129</div></div>
+      <div class="price-row"><div><div class="price-name">Tub / Shower Faucet Replacement</div></div><div class="price-amount">$169</div></div>
+      <div class="price-row"><div><div class="price-name">Vanity Install (customer supplies vanity)</div><div class="price-note">Remove old vanity, set and level new cabinet, reconnect plumbing</div></div><div class="price-amount">$199</div></div>
+      <div class="price-row"><div><div class="price-name">Garbage Disposal Install (plug-in only)</div></div><div class="price-amount">$149</div></div>
+      <div class="price-row"><div><div class="price-name">P-Trap Repair / Replacement</div></div><div class="price-amount">$99</div></div>
+    </div>
+
+    <div class="price-section">
+      <div class="price-section-title">🚪 Doors &amp; Hardware</div>
+      <div class="price-row"><div><div class="price-name">Lockset / Deadbolt Install</div></div><div class="price-amount">$99</div></div>
+      <div class="price-row"><div><div class="price-name">Door Handle Replacement</div></div><div class="price-amount">$79</div></div>
+      <div class="price-row"><div><div class="price-name">Sticky Door Adjustment</div></div><div class="price-amount">$89</div></div>
+      <div class="price-row"><div><div class="price-name">Wired Doorbell Swap</div></div><div class="price-amount">$99</div></div>
+      <div class="price-row"><div><div class="price-name">Cabinet Hardware (up to 10 pieces)</div></div><div class="price-amount">$99</div></div>
+      <div class="price-row"><div><div class="price-name">Cabinet Hardware (11–25 pieces)</div></div><div class="price-amount">$159</div></div>
+      <div class="price-row"><div><div class="price-name">Cabinet Hardware (full kitchen)</div></div><div class="price-amount">$229</div></div>
+    </div>
+
+    <div class="price-section">
+      <div class="price-section-title">🖼️ Furniture &amp; Hanging</div>
+      <div class="price-row"><div><div class="price-name">Furniture Assembly — Small</div></div><div class="price-amount">$59</div></div>
+      <div class="price-row"><div><div class="price-name">Furniture Assembly — Medium</div></div><div class="price-amount">$109</div></div>
+      <div class="price-row"><div><div class="price-name">Furniture Assembly — Large</div></div><div class="price-amount">$169</div></div>
+      <div class="price-row"><div><div class="price-name">Mirror / Artwork Hanging</div></div><div class="price-amount">$59</div></div>
+      <div class="price-row"><div><div class="price-name">Gallery Wall (5+ pieces)</div></div><div class="price-amount">$159</div></div>
+      <div class="price-row"><div><div class="price-name">Floating Shelf Install</div></div><div class="price-amount">$89</div></div>
+      <div class="price-row"><div><div class="price-name">Curtain Rod Installation</div></div><div class="price-amount">$79</div></div>
+      <div class="price-row"><div><div class="price-name">Blind / Shade Installation</div></div><div class="price-amount">$79</div></div>
+      <div class="price-row"><div><div class="price-name">Grab Bar Installation</div></div><div class="price-amount">$99</div></div>
+    </div>
+
+    <div class="price-section">
+      <div class="price-section-title">🏡 Outdoor &amp; Curb Appeal</div>
+      <div class="price-row"><div><div class="price-name">Mailbox Replacement</div></div><div class="price-amount">$99</div></div>
+      <div class="price-row"><div><div class="price-name">Mailbox Relocation / Reset</div><div class="price-note">Dig new hole, move existing mailbox</div></div><div class="price-amount">$149</div></div>
+      <div class="price-row"><div><div class="price-name">House Numbers Installation</div></div><div class="price-amount">$69</div></div>
+      <div class="price-row"><div><div class="price-name">Downspout Reattachment</div></div><div class="price-amount">$79</div></div>
+    </div>
+    </div><!-- /price-grid -->
+
+    <!-- ═══════ DISCOUNTS BOX ═══════ -->
+    <div style="background:rgba(255,179,0,0.05); border:1px solid rgba(255,179,0,0.2); border-radius:8px; padding:20px; margin-top:8px;">
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:16px; text-transform:uppercase; letter-spacing:0.06em; color:var(--amber); margin-bottom:12px;">🎉 Discounts</div>
+      <div class="price-row"><div class="price-name" style="color:var(--silver);">2+ different services, same visit</div><div class="price-amount" style="color:var(--amber);">–$25 off total</div></div>
+      <div class="price-row"><div class="price-name" style="color:var(--silver);">Need multiples of the same service?</div><div class="price-amount" style="color:var(--amber);">Just ask</div></div>
+    </div>
+
+    <div style="margin-top:48px; text-align:center;">
+      <p style="color:var(--dim); font-size:14px; margin-bottom:20px;">Don't see what you need? Reach out — chances are we can help.</p>
+      <a href="tel:8103699628" class="btn-primary">📞 (810) 369-9628</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ FOOTER — same on every page ═══════ -->
+<footer>
+  <img src="/assets/logo.jpg" alt="Zack of All Trades logo" class="footer-logo">
+  <div class="footer-name">Zack of All Trades Home Services</div>
+  <div class="footer-loc">Lapeer, Michigan · (810) 369-9628 · zack@zoathomeservices.com</div>
+  <div class="footer-nav">
+    <a href="/">Home</a>
+    <a href="/services/">Services</a>
+    <a href="/reviews/">Reviews</a>
+    <a href="/connect/">Connect</a>
+  </div>
+</footer>
+
+<script src="/site.js"></script>
+</body>
+</html>
