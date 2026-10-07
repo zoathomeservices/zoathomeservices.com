@@ -36,7 +36,7 @@
   <div class="section section-wide">
     <div class="section-label">Full Menu</div>
     <h2 class="section-title">All Services &amp; Pricing</h2>
-    <p class="section-sub">Flat rate pricing. No surprises. Jobs requiring crawl space, attic, or restricted access may include an additional service fee.</p>
+    <p class="section-sub">Flat rate pricing. No surprises. All prices are labor only — materials are customer-supplied unless otherwise negotiated. Jobs requiring crawl space, attic, or restricted access may include an additional service fee.</p>
 
     <div style="background:rgba(0,87,255,0.08); border:1px solid var(--cobalt-border); border-radius:8px; padding:16px 20px; margin-bottom:32px;">
       <p style="color:var(--silver); font-size:14px; margin:0;"><strong style="color:var(--white);">$89 minimum applies to all service calls.</strong> $75 diagnostic fee credited toward any work completed.</p>
@@ -45,7 +45,7 @@
     <!-- ═══════ PRICE CATEGORIES — tiled 2-up on desktop, single column on phones.
          The notice box above, discounts box, and bottom CTA stay full-width. ═══════ -->
     <div class="price-grid">
-    <div class="price-section">
+    <div class="price-section" id="tv-mounting">
       <div class="price-section-title">📺 TV &amp; Entertainment Mounting</div>
       <div class="price-row"><div><div class="price-name">Standard Wall Mount (fixed or tilt, up to 85")</div></div><div class="price-amount">$179</div></div>
       <div class="price-row"><div><div class="price-name">Full Motion Mount (articulating arm)</div></div><div class="price-amount">$249</div></div>
@@ -56,7 +56,7 @@
       <div class="price-row price-addon"><div class="price-name">2+ TVs same visit</div><div class="price-amount">–$25 each</div></div>
     </div>
 
-    <div class="price-section">
+    <div class="price-section" id="smart-home">
       <div class="price-section-title">🏠 Smart Home Upgrades &amp; Setup</div>
       <div class="price-row"><div><div class="price-name">Smart Switch / Dimmer Install</div></div><div class="price-amount">$109</div></div>
       <div class="price-row"><div><div class="price-name">Smart Fan Control Install</div></div><div class="price-amount">$109</div></div>
@@ -66,12 +66,15 @@
       <div class="price-row"><div><div class="price-name">Alexa / Google Home Setup + Walkthrough</div></div><div class="price-amount">$79</div></div>
       <div class="price-row price-addon"><div class="price-name">+ App integration add-on</div><div class="price-amount">+$49</div></div>
       <div class="price-row price-addon"><div class="price-name">+ Alexa / Google integration add-on</div><div class="price-amount">+$69</div></div>
-      <div class="price-row"><div><div class="price-name">Smart Starter Package (~1.5 hrs)</div></div><div class="price-amount">$249</div></div>
-      <div class="price-row"><div><div class="price-name">Smart Home Setup Package (~2–3 hrs)</div></div><div class="price-amount">$399</div></div>
-      <div class="price-row"><div><div class="price-name">Whole Home Smart Package (~3–4 hrs)</div></div><div class="price-amount">$599</div></div>
     </div>
 
-    <div class="price-section">
+    <div class="price-section" id="closet-organization">
+      <div class="price-section-title">👔 Closet Organization</div>
+      <div class="price-row"><div><div class="price-name">Modular Closet Organization System</div><div class="price-note">Spec, procure, and install — every fastener in a stud</div></div><div class="price-amount">Custom quote</div></div>
+      <div class="price-row"><div><div class="price-name">Closet Shelf Rescue &amp; Re-mount</div><div class="price-note">Fallen or failing shelves rebuilt to outlast the shelf itself</div></div><div class="price-amount">Custom quote</div></div>
+    </div>
+
+    <div class="price-section" id="outlets-switches">
       <div class="price-section-title">⚡ Outlets, Switches &amp; GFCI</div>
       <div class="price-row"><div><div class="price-name">Standard Outlet Replacement</div></div><div class="price-amount">$79</div></div>
       <div class="price-row"><div><div class="price-name">GFCI Outlet Install / Replace</div></div><div class="price-amount">$89</div></div>
@@ -82,28 +85,27 @@
       <div class="price-row price-addon"><div class="price-name">Need to bundle multiples? Discounts available — just ask.</div><div class="price-amount">Inquire</div></div>
     </div>
 
-    <div class="price-section">
+    <div class="price-section" id="fixture-swaps">
       <div class="price-section-title">💡 Fixture Swaps</div>
-      <div class="price-row"><div><div class="price-name">Light Fixture Replacement (interior)</div></div><div class="price-amount">$109</div></div>
-      <div class="price-row"><div><div class="price-name">Exterior Light Fixture</div></div><div class="price-amount">$109</div></div>
+      <div class="price-row"><div><div class="price-name">Light Fixture Replacement</div><div class="price-note">Fixtures above 10 ft may carry an additional fee</div></div><div class="price-amount">$109</div></div>
       <div class="price-row"><div><div class="price-name">Ceiling Fan Swap (existing wiring)</div></div><div class="price-amount">$139</div></div>
     </div>
 
-    <div class="price-section">
+    <div class="price-section" id="plumbing-repairs">
       <div class="price-section-title">🔧 Plumbing Repairs</div>
       <div class="price-row"><div><div class="price-name">Toilet Seat Replacement</div></div><div class="price-amount">$59</div></div>
       <div class="price-row"><div><div class="price-name">Flapper Repair</div></div><div class="price-amount">$79</div></div>
       <div class="price-row"><div><div class="price-name">Toilet Tank Rebuild</div></div><div class="price-amount">$129</div></div>
-      <div class="price-row"><div><div class="price-name">Toilet Replacement (customer supplies)</div></div><div class="price-amount">$179</div></div>
+      <div class="price-row"><div><div class="price-name">Toilet Replacement</div></div><div class="price-amount">$179</div></div>
       <div class="price-row"><div><div class="price-name">Showerhead Replacement</div></div><div class="price-amount">$79</div></div>
       <div class="price-row"><div><div class="price-name">Sink Faucet Replacement</div></div><div class="price-amount">$129</div></div>
       <div class="price-row"><div><div class="price-name">Tub / Shower Faucet Replacement</div></div><div class="price-amount">$169</div></div>
-      <div class="price-row"><div><div class="price-name">Vanity Install (customer supplies vanity)</div><div class="price-note">Remove old vanity, set and level new cabinet, reconnect plumbing</div></div><div class="price-amount">$199</div></div>
+      <div class="price-row"><div><div class="price-name">Vanity Install</div><div class="price-note">Remove old vanity, set and level new cabinet, reconnect plumbing</div></div><div class="price-amount">$199</div></div>
       <div class="price-row"><div><div class="price-name">Garbage Disposal Install (plug-in only)</div></div><div class="price-amount">$149</div></div>
       <div class="price-row"><div><div class="price-name">P-Trap Repair / Replacement</div></div><div class="price-amount">$99</div></div>
     </div>
 
-    <div class="price-section">
+    <div class="price-section" id="doors-hardware">
       <div class="price-section-title">🚪 Doors &amp; Hardware</div>
       <div class="price-row"><div><div class="price-name">Lockset / Deadbolt Install</div></div><div class="price-amount">$99</div></div>
       <div class="price-row"><div><div class="price-name">Door Handle Replacement</div></div><div class="price-amount">$79</div></div>
@@ -114,7 +116,7 @@
       <div class="price-row"><div><div class="price-name">Cabinet Hardware (full kitchen)</div></div><div class="price-amount">$229</div></div>
     </div>
 
-    <div class="price-section">
+    <div class="price-section" id="furniture-hanging">
       <div class="price-section-title">🖼️ Furniture &amp; Hanging</div>
       <div class="price-row"><div><div class="price-name">Furniture Assembly — Small</div></div><div class="price-amount">$59</div></div>
       <div class="price-row"><div><div class="price-name">Furniture Assembly — Medium</div></div><div class="price-amount">$109</div></div>
@@ -127,12 +129,33 @@
       <div class="price-row"><div><div class="price-name">Grab Bar Installation</div></div><div class="price-amount">$99</div></div>
     </div>
 
-    <div class="price-section">
+    <div class="price-section" id="curb-appeal">
       <div class="price-section-title">🏡 Outdoor &amp; Curb Appeal</div>
       <div class="price-row"><div><div class="price-name">Mailbox Replacement</div></div><div class="price-amount">$99</div></div>
       <div class="price-row"><div><div class="price-name">Mailbox Relocation / Reset</div><div class="price-note">Dig new hole, move existing mailbox</div></div><div class="price-amount">$149</div></div>
       <div class="price-row"><div><div class="price-name">House Numbers Installation</div></div><div class="price-amount">$69</div></div>
       <div class="price-row"><div><div class="price-name">Downspout Reattachment</div></div><div class="price-amount">$79</div></div>
+    </div>
+
+    <div class="price-section" id="interior-painting">
+      <div class="price-section-title">🖌️ Interior Painting</div>
+      <div class="price-row"><div><div class="price-name">Walls</div><div class="price-note">Per sq ft of wall — a standard 12×12 bedroom runs about $575</div></div><div class="price-amount">$1.50/sq ft</div></div>
+      <div class="price-row"><div><div class="price-name">Accent Wall</div></div><div class="price-amount">$2.00/sq ft</div></div>
+      <div class="price-row"><div><div class="price-name">Ceiling</div><div class="price-note">Textured, vaulted, or high-reach ceilings quoted per job</div></div><div class="price-amount">$1.50/sq ft</div></div>
+      <div class="price-row"><div><div class="price-name">Trim</div></div><div class="price-amount">$2/lin ft</div></div>
+      <div class="price-row"><div><div class="price-name">Door — same color both sides</div></div><div class="price-amount">$50</div></div>
+      <div class="price-row"><div><div class="price-name">Door — different color each side</div></div><div class="price-amount">$75</div></div>
+    </div>
+
+    <div class="price-section" id="home-maintenance">
+      <div class="price-section-title">🛠️ Home Maintenance</div>
+      <div class="price-row"><div><div class="price-name">Water Heater Flush + Dryer Vent Cleaning</div></div><div class="price-amount">$149</div></div>
+      <div class="price-row"><div><div class="price-name">Gutter Cleaning (single story)</div><div class="price-note">Two-story homes: additional charge, quoted per job</div></div><div class="price-amount">$1/lin ft</div></div>
+      <div class="price-row"><div><div class="price-name">Furnace Filter Change</div></div><div class="price-amount">$59</div></div>
+      <div class="price-row"><div><div class="price-name">Whole-Home Smoke &amp; CO Alarm Testing</div><div class="price-note">Every alarm tested, expiry dates checked</div></div><div class="price-amount">$49</div></div>
+      <div class="price-row"><div><div class="price-name">Smoke &amp; CO Alarm Replacement (hardwired)</div><div class="price-note">Existing wired alarms only — no new wiring runs</div></div><div class="price-amount">$49</div></div>
+      <div class="price-row"><div><div class="price-name">Smoke &amp; CO Alarm Install/Replacement (battery-powered)</div></div><div class="price-amount">$39</div></div>
+      <div class="price-row"><div><div class="price-name">Smoke &amp; CO Alarm Battery Change (battery included)</div><div class="price-note">Per alarm</div></div><div class="price-amount">$24</div></div>
     </div>
     </div><!-- /price-grid -->
 
